@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >Dynamic Portal Content</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <button id="themeToggle" class="theme-btn">🌙</button>
+    </div>
+
+    <!-- Notification Banner -->
+    <div id="notificationBanner" class="notification-banner hidden">
+        <div class="notification-content">
+            <span id="notificationText"></span>
+            <button id="closeNotification" class="close-btn">&times;</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Dynamic Portal Content</h1>
+
+        <!-- Image Slider Section -->
+        <section class="slider-section">
+            <h2>Featured Content Slider</h2>
+            <div class="slider-container">
+                <div class="slider" id="imageSlider">
+                    <div class="slide active">
+                        <img src="img/20250720_122737.png" alt="Slide 1">
+                        <div class="slide-content">
+                            <h3>Welcome to Our Portal</h3>
+                            <p>Discover amazing features and functionality</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="img/new101.png" alt="Slide 2">
+                        <div class="slide-content">
+                            <h3>Interactive Components</h3>
+                            <p>Experience dynamic content at its best</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="img/new12.png" alt="Slide 3">
+                        <div class="slide-content">
+                            <h3>Enhanced User Experience</h3>
+                            <p>Smooth animations and responsive design</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-btn prev" id="prevBtn">❮</button>
+                <button class="slider-btn next" id="nextBtn">❯</button>
+                <div class="slider-dots" id="sliderDots"></div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container" id="faqContainer">
+                <!-- FAQ items will be dynamically loaded -->
+            </div>
+        </section>
+
+        <!-- Interactive Cards Section -->
+        <section class="cards-section">
+            <h2>Interactive Feature Cards</h2>
+            <div class="cards-container">
+                <div class="card" data-popup="popup1">
+                    <h3>DOM Manipulation</h3>
+                    <p>Learn about selecting and manipulating DOM elements</p>
+                    <button class="card-btn">Learn More</button>
+                </div>
+                <div class="card" data-popup="popup2">
+                    <h3>Event Handling</h3>
+                    <p>Master event listeners and user interactions</p>
+                    <button class="card-btn">Learn More</button>
+                </div>
+                <div class="card" data-popup="popup3">
+                    <h3>Dynamic Content</h3>
+                    <p>Create engaging user experiences with animations</p>
+                    <button class="card-btn">Learn More</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Action Buttons -->
+        <section class="actions-section">
+            <h2>Portal Actions</h2>
+            <div class="action-buttons">
+                <button id="showSuccessNotification" class="action-btn success">Show Success</button>
+                <button id="showWarningNotification" class="action-btn warning">Show Warning</button>
+                <button id="showErrorNotification" class="action-btn error">Show Error</button>
+                <button id="showInfoNotification" class="action-btn info">Show Info</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Popup Modals -->
+    <div id="popup1" class="popup-overlay hidden">
+        <div class="popup-content">
+            <h3>DOM Manipulation</h3>
+            <p>DOM manipulation involves selecting HTML elements using methods like getElementById, querySelector, and addEventListener. This allows dynamic modification of content, styles, and structure.</p>
+            <ul>
+                <li>Element selection and traversal</li>
+                <li>Content modification</li>
+                <li>Style manipulation</li>
+                <li>Attribute handling</li>
+            </ul>
+            <button class="popup-close">&times;</button>
+        </div>
+    </div>
+
+    <div id="popup2" class="popup-overlay hidden">
+        <div class="popup-content">
+            <h3>Event Handling</h3>
+            <p>Event handling enables interactive user experiences through proper listener management, event delegation, and responsive feedback mechanisms.</p>
+            <ul>
+                <li>Click and input events</li>
+                <li>Event delegation</li>
+                <li>Custom event creation</li>
+                <li>Performance optimization</li>
+            </ul>
+            <button class="popup-close">&times;</button>
+        </div>
+    </div>
+
+    <div id="popup3" class="popup-overlay hidden">
+        <div class="popup-content">
+            <h3>Dynamic Content</h3>
+            <p>Dynamic content creation involves real-time updates, smooth animations, and responsive interfaces that adapt to user interactions and data changes.</p>
+            <ul>
+                <li>Real-time updates</li>
+                <li>Animation transitions</li>
+                <li>Responsive design</li>
+                <li>User experience enhancement</li>
+            </ul>
+            <button class="popup-close">&times;</button>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
